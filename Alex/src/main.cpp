@@ -2,7 +2,7 @@
 #include "ProductionCode.h"
 
 int main(){
-	
+
 	int choice = 0;
 	int width = 0;
 	int length = 0;	
@@ -34,7 +34,7 @@ int main(){
 				break;
 			case 1:
 				if(threeDimensional == true){
-					printf("Circumference: %d\n%d\n%d\n\n", circumferenceCalculation(width,length), circumferenceCalculation(width,height), circumferenceCalculation(width,height));
+					printf("Circumference: %d\n%d\n%d\n\n", circumferenceCalculation(width,length), circumferenceCalculation(width,height), circumferenceCalculation(length,height));
 				}else{
 					result = circumferenceCalculation(width, length);
 					printf("Circumference: %d\n\n", result);
@@ -45,7 +45,7 @@ int main(){
 				if(threeDimensional == true){
 					result = areaCalculationThreeDimensional(width, length, height);
 					printf("Restriction area: %d\n\n", result);
-				
+
 				}else{
 					result = multiplyNumbers(width, length);
 					printf("Area: %d\n\n", result);
@@ -62,5 +62,5 @@ int main(){
 				break;
 		}
 	}
-
+	return 0;
 }
