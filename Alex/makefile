@@ -70,7 +70,7 @@ default:
 	- ./$(TARGET1) -v
 
 clean:
-	$(CLEANUP) $(TARGET1)
+	$(CLEANUP) $(TARGET1) $(TARGET2)
 
 ci: CFLAGS += -Werror
 ci: default
