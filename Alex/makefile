@@ -54,7 +54,16 @@ SRC_FILES1=\
 INC_DIRS=-Isrc -I$(UNITY_ROOT)/src -I$(UNITY_ROOT)/extras/fixture/src
 SYMBOLS=
 
-all: clean default
+TARGET_BASE2=tenta_uppgift
+TARGET2 = $(TARGET_BASE2)$(TARGET_EXTENSION)
+SRC_FILES2=\
+  src/main.cpp \
+  src/ProductionCode.c
+
+all: clean default build
+
+build: clean
+	$(C_COMPILER) $(CFLAGS) $(SRC_FILES2) -o $(TARGET2)
 
 default:
 	$(C_COMPILER) $(CFLAGS) $(INC_DIRS) $(SYMBOLS) $(SRC_FILES1) -o $(TARGET1)
