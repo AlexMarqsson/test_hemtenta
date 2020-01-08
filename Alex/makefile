@@ -20,14 +20,14 @@
 #	TARGET_EXTENSION=.out
 #endif
 
-C_COMPILER=gcc
+C_COMPILER=g++
 #ifeq ($(shell uname -s), Darwin)
 #C_COMPILER=clang
 #endif
 
 UNITY_ROOT=../unity/
 
-CFLAGS=-std=c99
+#CFLAGS=-std=c99
 CFLAGS += -Wall
 CFLAGS += -Wextra
 CFLAGS += -Wpointer-arith
@@ -38,9 +38,9 @@ CFLAGS += -Wunreachable-code
 CFLAGS += -Winit-self
 CFLAGS += -Wmissing-field-initializers
 CFLAGS += -Wno-unknown-pragmas
-CFLAGS += -Wstrict-prototypes
+#CFLAGS += -Wstrict-prototypes
 CFLAGS += -Wundef
-CFLAGS += -Wold-style-definition
+#CFLAGS += -Wold-style-definition
 
 TARGET_BASE1=all_tests
 TARGET1 = $(TARGET_BASE1)$(TARGET_EXTENSION)
