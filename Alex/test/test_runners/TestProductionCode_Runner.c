@@ -3,7 +3,7 @@
 
 TEST_GROUP_RUNNER(ProductionCode)
 {
-  RUN_TEST_CASE(ProductionCode, SeeIfMultiplyNumbersFunctionIsCorrect);
-  RUN_TEST_CASE(ProductionCode, SeeIfAreaCalculationThreeDimensionalIsCorrect);
-  RUN_TEST_CASE(ProductionCode, SeeIfCircumferenceCalculationIsCorrect);
+	RUN_TEST_CASE(ProductionCode, SeeIfMultiplyNumbersFunctionIsCorrect);
+	RUN_TEST_CASE(ProductionCode, SeeIfAreaCalculationThreeDimensionalIsCorrect);
+	RUN_TEST_CASE(ProductionCode, SeeIfCircumferenceCalculationIsCorrect);
 }
