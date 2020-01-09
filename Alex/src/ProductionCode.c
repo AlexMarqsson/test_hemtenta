@@ -1,8 +1,10 @@
 /*	ProductionCode.c
  * 	Functions file for tenta assignment
+ * 	multiplyNumbers(), areaCalculationThreeDimensional() and 
+ * 	circumferenceCalculation() are target functions for unity testing
  *	By: Alex Markusson
  *	2020-01-08
- *						 */
+ *								 		*/
 
 #include "ProductionCode.h"
 
