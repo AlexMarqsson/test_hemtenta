@@ -1,29 +1,35 @@
 # ==========================================
+#   Modified by: Alex Markusson
+#   2020-01-08 Commented out come CFLAGS
+#   Changed C_COMPILER from gcc to g++
+#   Made make build rule with new target and source files and added it to make all
+#   Added TARGET2 to make clean
+# ==========================================
 #   Unity Project - A Test Framework for C
 #   Copyright (c) 2007 Mike Karlesky, Mark VanderVoord, Greg Williams
 #   [Released under MIT License. Please refer to license.txt for details]
 # ==========================================
 
 #We try to detect the OS we are running on, and adjust commands as needed
-#ifeq ($(OS),Windows_NT)
-#  ifeq ($(shell uname -s),) # not in a bash-like shell
+ifeq ($(OS),Windows_NT)
+  ifeq ($(shell uname -s),) # not in a bash-like shell
 	CLEANUP = del /F /Q
 	MKDIR = mkdir
-#  else # in a bash-like shell, like msys
-#	CLEANUP = rm -f
-#	MKDIR = mkdir -p
-#  endif
+  else # in a bash-like shell, like msys
+	CLEANUP = rm -f
+	MKDIR = mkdir -p
+  endif
 	TARGET_EXTENSION=.exe
-#else
-#	CLEANUP = rm -f
-#	MKDIR = mkdir -p
-#	TARGET_EXTENSION=.out
-#endif
+else
+	CLEANUP = rm -f
+	MKDIR = mkdir -p
+	TARGET_EXTENSION=.out
+endif
 
 C_COMPILER=g++
-#ifeq ($(shell uname -s), Darwin)
-#C_COMPILER=clang
-#endif
+ifeq ($(shell uname -s), Darwin)
+C_COMPILER=clang
+endif
 
 UNITY_ROOT=../unity/
 
