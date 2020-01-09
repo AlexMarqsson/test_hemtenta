@@ -10,19 +10,19 @@ int main(){
 	int result = 0;
 	bool threeDimensional = false;
 
-	while(choice != 4){
+	while (choice != 4){
 
-		switch(choice){
+		switch (choice){
 			case 0:
 				width = 0;
 				length = 0;
 				height = 0;
 				choice = menu();
 
-				if(choice == 4){break;}
+				if (choice == 4){break;}
 				threeDimensional = threeDChoice();
 
-				if(threeDimensional == false && choice == 3){
+				if (threeDimensional == false && choice == 3){
 					printf("\n\n***Needs to be a 3D object for Volume***\n\n");
 					choice = 0;
 					break;
@@ -32,13 +32,13 @@ int main(){
 				printf("\nEnter length(1-999): ");
 				length = valueInput();
 
-				if(threeDimensional == true){
+				if (threeDimensional == true){
 					printf("\nEnter height(1-999): ");
 					height = valueInput();
 				}
 				break;
 			case 1:
-				if(threeDimensional == true){
+				if (threeDimensional == true){
 					printf("Circumference: %d\n%d\n%d\n\n", circumferenceCalculation(width,length), circumferenceCalculation(width,height), circumferenceCalculation(length,height));
 				}else{
 					result = circumferenceCalculation(width, length);
@@ -47,7 +47,7 @@ int main(){
 				choice = 0;
 				break;
 			case 2:
-				if(threeDimensional == true){
+				if (threeDimensional == true){
 					result = areaCalculationThreeDimensional(width, length, height);
 					printf("Restriction area: %d\n\n", result);
 

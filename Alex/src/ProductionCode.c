@@ -41,7 +41,7 @@ int menu(){
 	printf("Choice: ");
 	std::cin >> choice;
 
-	while(std::cin.fail() || choice > 4 || choice < 1){
+	while (std::cin.fail() || choice > 4 || choice < 1){
 		printf("Invalid input, try again..");
 		std::cin.clear();
 		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
@@ -63,7 +63,7 @@ bool threeDChoice(){
 	printf("Choice: ");
 	std::cin >> choice;
 
-	while(std::cin.fail() || choice < 0 || choice > 1){
+	while (std::cin.fail() || choice < 0 || choice > 1){
 		printf("Invalid input, try again..");
 		std::cin.clear();
 		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
@@ -81,7 +81,7 @@ int valueInput(){
 	int value = 0;
 	std::cin >> value;
 
-	while(std::cin.fail() || value < 1 || value > 999){
+	while (std::cin.fail() || value < 1 || value > 999){
 		printf("Invalid value, try again..");
 		std::cin.clear();
 		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
