@@ -9,15 +9,19 @@ int main(){
 	int height = 0;
 	int result = 0;
 	bool threeDimensional = false;
+
 	while(choice != 4){
+
 		switch(choice){
 			case 0:
 				width = 0;
 				length = 0;
 				height = 0;
 				choice = menu();
+
 				if(choice == 4){break;}
 				threeDimensional = threeDChoice();
+
 				if(threeDimensional == false && choice == 3){
 					printf("\n\n***Needs to be a 3D object for Volume***\n\n");
 					choice = 0;
@@ -27,6 +31,7 @@ int main(){
 				width = valueInput();
 				printf("\nEnter length(1-999): ");
 				length = valueInput();
+
 				if(threeDimensional == true){
 					printf("\nEnter height(1-999): ");
 					height = valueInput();
@@ -62,5 +67,6 @@ int main(){
 				break;
 		}
 	}
+
 	return 0;
 }
