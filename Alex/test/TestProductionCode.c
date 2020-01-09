@@ -4,16 +4,13 @@
 
 TEST_GROUP(ProductionCode);
 
-TEST_SETUP(ProductionCode)
-{
+TEST_SETUP(ProductionCode){
 }
 
-TEST_TEAR_DOWN(ProductionCode)
-{
+TEST_TEAR_DOWN(ProductionCode){
 }
 
-TEST(ProductionCode, SeeIfMultiplyNumbersFunctionIsCorrect)
-{
+TEST(ProductionCode, SeeIfMultiplyNumbersFunctionIsCorrect){
 	TEST_ASSERT_EQUAL(25, multiplyNumbers(5,5));
 	TEST_ASSERT_EQUAL(5000, multiplyNumbers(50,100));
 	TEST_ASSERT_EQUAL(600, multiplyNumbers(15,40));
@@ -24,8 +21,7 @@ TEST(ProductionCode, SeeIfMultiplyNumbersFunctionIsCorrect)
 	TEST_ASSERT_NOT_EQUAL(8046, multiplyNumbers(156,480));
 }
 
-TEST(ProductionCode, SeeIfAreaCalculationThreeDimensionalIsCorrect)
-{
+TEST(ProductionCode, SeeIfAreaCalculationThreeDimensionalIsCorrect){
 	TEST_ASSERT_EQUAL(150, areaCalculationThreeDimensional(5,5,5));
 	TEST_ASSERT_EQUAL(54, areaCalculationThreeDimensional(3,3,3));
 	TEST_ASSERT_EQUAL(1049600, areaCalculationThreeDimensional(800,240,320));
@@ -33,8 +29,7 @@ TEST(ProductionCode, SeeIfAreaCalculationThreeDimensionalIsCorrect)
 	TEST_ASSERT_NOT_EQUAL(28, areaCalculationThreeDimensional(768,646,24));
 }
 
-TEST(ProductionCode, SeeIfCircumferenceCalculationIsCorrect)
-{
+TEST(ProductionCode, SeeIfCircumferenceCalculationIsCorrect){
 	TEST_ASSERT_EQUAL(28, circumferenceCalculation(6,8));
 	TEST_ASSERT_EQUAL(2568, circumferenceCalculation(560,724));
 	TEST_ASSERT_NOT_EQUAL(28, circumferenceCalculation(762,4));
