@@ -64,6 +64,7 @@ TARGET_BASE2=tenta_uppgift
 TARGET2 = $(TARGET_BASE2)$(TARGET_EXTENSION)
 SRC_FILES2=\
   src/main.cpp \
+  src/UiFunctions.cpp \
   src/ProductionCode.c
 
 all: clean default build
